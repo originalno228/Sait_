@@ -45,8 +45,9 @@ def login():
         text = "Вы вышли"
         return render_template("login.html", Admin=True)
 
-    if request.method == "POST"  and redacting == True:
+    if request.method == "POST" and redacting == True:
         flash("Вы вышли", "error")
+        text = ""
         redacting = False
         return render_template("login.html", Admin=False)
     else:
@@ -100,6 +101,7 @@ class Article(db.Model):
     intro = db.Column(db.String(300), nullable=False)
     text = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow())
+    public = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return '<Articel %r' % self.id  # объект + айди
@@ -151,6 +153,7 @@ def create_article():
         intro = request.form['intro']
         text = request.form['text']
 
+
         article = Article(title=title, intro=intro, text=text)
         try:
             db.session.add(article)
@@ -164,6 +167,37 @@ def create_article():
         else:  # вход
             return render_template("create-article.html", Admin=False)
 
+
+@app.route('/predlog-article', methods=['POST', 'GET'])
+def predlog_article():
+    if request.method == "POST":
+        title = request.form['title']
+        intro = request.form['intro']
+        text = request.form['text']
+
+        article = Article(title=title, intro=intro, text=text)
+        try:
+            db.session.add(article)
+            db.session.commit()
+            return redirect('/posts')  # перейти на
+        except:
+            return "Ошибка при добавлении статьи"
+    else:
+        if redacting:  # выход
+            return render_template("predlog-article.html", Admin=True)
+        else:  # вход
+            return render_template("predlog-article.html", Admin=False)
+
+
+
+@app.route('/Admin', methods=['POST', 'GET'])
+def Admin():
+    return render_template("Admin.html")
+
+
+@app.route('/Guest', methods=['POST', 'GET'])
+def Guest():
+    return render_template("Guest.html")
 
 
 
