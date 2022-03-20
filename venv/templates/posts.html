@@ -10,12 +10,16 @@
 
     {% if articles | length > 0 %}
         {% for el in articles %}
+            
         <div class="post-div">
+            <p>{{ el.pulic }}ghjk</p>
             <h2 class="post-title"> {{ el.title }}</h2>
             <p> {{ el.intro }}</p>
             <p> <b>Дата публикации:{{ el.date.date() }} </b></p>
             <a href="/posts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+
         </div>
+            
         {% endfor %}
     {% else %}
     <p class="no-posts">На сайте нет ни одной статьи</p>
