@@ -88,11 +88,13 @@ def create_db():
 
 @app.route('/')
 def index():
-    pic1 = os.path.join(app.config['UPLOAD_FOLDER'], '2.jpg')
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'on.jpg')#картинка!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'], 'itcube.jpg')  # картинка!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     if redacting:#выход
-        return render_template("index.html", user_image=pic1, Admin = True)
+        return render_template("index.html", user_image=pic1, user_image2=pic2, Admin = True)
     else:#вход
-        return render_template("index.html", user_image=pic1, Admin = False)
+        return render_template("index.html", user_image=pic1, user_image2=pic2, Admin = False)
 
 
 class Article(db.Model):
@@ -129,7 +131,7 @@ def post_delete(id):  # функция удаления статьи
 
 
 @app.route('/posts/<int:id>/update', methods=['POST', 'GET'])
-def post_update(id):  # функция редактирования статьи!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+def post_update(id):  # функция редактирования статьи
     article = Article.query.get(id)
     if request.method == "POST":
         article.title = request.form['title']
@@ -143,11 +145,11 @@ def post_update(id):  # функция редактирования статьи
             return "Ошибка при редактировании статьи"
     else:
 
-        return render_template("post_update.html", article=article)
+        return render_template("post_update.html", article=article, Admin=True,)
 
 
 @app.route('/create-article', methods=['POST', 'GET'])
-def create_article():
+def create_article():# функция создание статьи (на сайте)
     if request.method == "POST":
         title = request.form['title']
         intro = request.form['intro']
@@ -192,7 +194,7 @@ def predlog_article():
 
 @app.route('/Admin', methods=['POST', 'GET'])
 def Admin():
-    return render_template("Admin.html")
+    return render_template("Admin.html", Admin=True)
 
 
 @app.route('/Guest', methods=['POST', 'GET'])

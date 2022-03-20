@@ -6,12 +6,13 @@
 
 {% block body%}
 
-    <h1 class="post-dobstats">Обновление статьи</h1>
+    <h1 class="post-dobstats">Обновление Урока</h1>
     <div class="post-div">
     <form method="post">
         <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Введите название"><br>
-        <textarea name="intro" id="intro" class="form-control" placeholder="Введите не знаю что">{{ article.intro }}</textarea><br>
-        <textarea name="text" id="text" class="form-control" placeholder="Введите чё-нибудь">{{ article.text }}</textarea><br>
+        <br>
+        <textarea name="intro" id="intro" class="text-area" placeholder="Введите не знаю что">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="text-area" placeholder="Введите чё-нибудь">{{ article.text }}</textarea><br>
         <input type="submit" class="form-control" value="Обновить">
     </form>
 

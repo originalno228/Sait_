@@ -1,5 +1,5 @@
 body {
-    background: rgb(211, 211, 211);
+    background: rgb(211, 205, 205);
     font-family: Arial, Helvetica, sans-serif;
     border-style: none;
     margin: 0 0;
@@ -65,7 +65,9 @@ background: #f37949;
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 2px 2px rgb(159, 159, 160);
     border-radius: 20px;
+    border: 3px solid #000000;
 }
+
 
 .only_post-div /*одиночный пост в "детальнее"*/
 {
@@ -93,6 +95,7 @@ background: #f37949;
 }
 .post-title {
     margin: 0;
+    
 }
 .no-posts {
     margin-left: 20px;
@@ -103,6 +106,8 @@ background: #f37949;
 {
     margin-left: 20px;
     min-height: 30px;
+    border: 2px solid #181616;
+   
     
 }
 
@@ -135,6 +140,12 @@ min-height: 100px;
     margin-right: 40px;
 }
 
+.nav-names-profil
+ {
+    color: rgb(182, 125, 3);
+    margin-right: 40px;
+}
+
 .nav-names2:hover 
 {
     transform: scale(1.2);
@@ -154,7 +165,7 @@ min-height: 100px;
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!КАРТИНЫ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
-.two-button {
+.delete-button {
     width: 20%;
     height: 560px;
     margin-top: 30px;
@@ -162,6 +173,27 @@ min-height: 100px;
     padding: 20px;
 
     background-color: rgb(236, 224, 49);
+    border-radius: 15px;
+}
+
+.two-button {
+    width: 20%;
+    height: 560px;
+    margin-top: 30px;
+    margin-left: 0%;
+    padding: 12px;
+
+    background-color: rgb(253, 143, 143);
+    border-radius: 15px;
+}
+.two-button2 {
+    width: 20%;
+    height: 560px;
+    margin-top: 30px;
+    margin-left: 0%;
+    padding: 12px;
+
+    background-color: rgb(251, 229, 24);
     border-radius: 15px;
 }
 
@@ -174,6 +206,7 @@ min-height: 100px;
 
     background-color: rgb(238, 238, 238);
     border-radius: 15px;
+    border: 6px solid #dd0c0c;
 }
 
 .card-photo {
@@ -181,8 +214,10 @@ min-height: 100px;
     width: 200px;
     height: 200px;
 
+
     margin: 0 auto;
     border-radius: 50%;
+    border: 4px solid #dd0c0c;
 }
 
 .card-text {
@@ -196,6 +231,8 @@ min-height: 100px;
     font-size: 20px;
     color: rgb(82, 82, 82);
     text-size-adjust: none;
+    
+    
 }
 
 .news {
@@ -207,26 +244,30 @@ min-height: 100px;
 
     background-color: rgb(238, 238, 238);
     border-radius: 15px;
+
+    
 }
 
 .top-news-name {
     margin-left: 2%;
     margin-top: 10px;
-    color: rgb(238, 238, 238);
+    color: rgb(253, 253, 253);
     font-size: 48px;
     z-index: 3;
-    bottom: 10%;
+    bottom: 50%;
     position: absolute;
     transition: all 0.5s ease-in-out 0s;
+    
+    
 }
 .top-news-sd {/*текст на картинке*/
     margin-bottom: 20px;
     margin-left: 2%;
     width: 70%;
-    bottom: -5%;
+    bottom: -15%;
 
     opacity: 0;
-    color: rgb(238, 238, 238);
+    color: rgb(255, 255, 255);
     font-size: 20px;
     z-index: 3;
     position: absolute;
@@ -237,10 +278,17 @@ min-height: 100px;
     border-radius: 15px;
     width: 100%;
     height: 100%;
+    
+
 }
 
 .news:hover .top-news-name {/*анимация картинки*/
-    bottom: 32%;
+    bottom: 28%;
+    
+
+}
+.news:hover .top-news-preview {
+    filter: brightness(36%);
 }
 .news:hover .top-news-sd {/*анимация картинки*/
     opacity: 100%;
@@ -251,6 +299,44 @@ min-height: 100px;
 .body-container {
     display: flex; 
     flex-direction: row;
+    
 }
 
+
+.Polzovatel {
+    margin-right: 40px;
+    animation: rainbow-main 4s linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-main {
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(187, 187, 6);
+    }
+    25%{
+        color: rgb(138, 235, 42);
+    }
+
+
+    50%{
+        color: rgb(7, 192, 192);
+    }
+
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+
+}
 

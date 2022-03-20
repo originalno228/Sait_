@@ -10,7 +10,6 @@
 <body>
 
 <div>
-     
 
         <div class="nav-names">
           <nav class="nav">
@@ -23,32 +22,32 @@
                   <h2><a class="nav-names2" href="/create-article">Создать</a></h2>
               </li>
               {% else %}
-                  <li>
-                    <h2><a class="nav-names2" href="/predlog-article">Предложить новость</a></h2>
-                </li>
+                  
               {% endif %}
               
 
               <li>
-                  <h2><a class="nav-names2" href="/posts">Статьи</a></h2>
+                  <h2><a class="nav-names2" href="/posts">Уроки</a></h2>
               </li>
                   {% if Admin %}
-                  <li>
-                    <h2><a class="nav-names-profil" href="/Admin">Админ</a></h2>
-                </li>
+                  
 
               <li>
                   <h2><a class="nav-names2" href="/login">Выход</a></h2>
               </li>
+              <li>
+                <h2><a class="Polzovatel" href="/Admin">Админ</a></h2>
+            </li>
               
 
                     {% else %}
-                    <li>
-                      <h2><a class="nav-names-profil" href="/Guest">Гость</a></h2>
-                  </li>
+                    
                   <li>
                     <h2><a class="nav-names2" href="/login">Вход</a></h2>
                 </li>
+                <li>
+                  <h2><a class="nav-names-profil" href="/Guest">Гость</a></h2>
+              </li>
 
                      {% endif %}
           </ul>

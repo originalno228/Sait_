@@ -14,8 +14,8 @@
         <p> <b> Дата публикации:{{ article.date.date() }} </b></p>
  
     {% if Admin %}
-        <a href="/posts/{{ article.id }}/del" class="btn btn-danger">Удалить</a>
-        <a href="/posts/{{ article.id }}/update" class="btn btn-success">Редактировать</a>
+        <a href="/posts/{{ article.id }}/del" class="two-button">Удалить</a>
+        <a href="/posts/{{ article.id }}/update" class="two-button2">Редактировать</a>
 
     {%else%}
 
