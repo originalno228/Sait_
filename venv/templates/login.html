@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Вход
+{% endblock %}
+
+{% block body%}
+
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{ cat }}">{{ msg }}</div>
+{% endfor %}
+
+
+<div class="login-div">
+    <form action="/login" method="post" class="form-contact">
+        <p class="login"><label>Логин:  </label> <input type="text" name="name" value="" required/>
+        <p class="login"><label>Пароль: </label> <input type="password" name="psw" value="" required/>
+
+        {% if Admin %}
+        <!--<a href="/login" class="two-button">Выйти</a>-->
+        <br>
+
+        <input name="out" type="submit" class="btn btn-success" value="выйти">
+
+        {% else %}
+        <br>
+        <!--<a href="/login" class="two-button">Войти</a>-->
+        <input name="in" type="submit" class="btn btn-success" value="войти">
+
+
+        {% endif %}
+
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}

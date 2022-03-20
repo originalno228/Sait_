@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{% block title%}{% endblock %}</title>
+</head>
+<body>
+
+<div>
+     
+
+        <div class="nav-names">
+          <nav class="nav">
+            <ul class="header-list">
+              <li>
+                <h2><a class="nav-names2" href="/">Главная</a></h2>
+              </li>
+              {% if Admin %}
+              <li>
+                  <h2><a class="nav-names2" href="/create-article">Создать</a></h2>
+              </li>
+              {% endif %}
+              
+
+              <li>
+                  <h2><a class="nav-names2" href="/posts">Статьи</a></h2>
+              </li>
+                  {% if Admin %}
+              <li>
+                  <h2><a class="nav-names2" href="/login">Выход</a></h2>
+              </li>
+                    {% else %}
+                  <li>
+                    <h2><a class="nav-names2" href="/login">Вход</a></h2>
+                </li>
+                     {% endif %}
+          </ul>
+          </nav>
+        </div>
+    </div>
+{% block body %}{% endblock %}
+
+
+</body>
+</html>

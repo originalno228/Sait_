@@ -1,0 +1,256 @@
+body {
+    background: rgb(211, 211, 211);
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: none;
+    margin: 0 0;
+    color: rgb(26, 26, 26);
+}
+body a
+{
+    text-decoration: none;
+}
+
+.flash {padding: 10px; margin: 20px;}
+.flash.success 
+{
+border: 3px solid #21DB56;
+background: #AEFFC5;
+}
+.flash.error 
+{
+border: 3px solid #f82b06;
+background: #f37949;
+}
+
+
+
+
+.nav-names { /*меню сверху*/
+    border-radius: 20px;
+    background-color: rgb(251, 248, 233);
+    box-shadow: 1px 1px 2px 2px rgb(54, 54, 54);
+    
+
+    position: relative;
+    display: flex;
+
+    height: 100px;
+    width: fit-content;
+    margin: 20px auto;    
+    right: 0;
+    padding: 0%;
+    
+}
+
+.header-list {
+    display: flex;
+    list-style: none;
+}
+.header-link {
+    color: rgb(26, 26, 26);
+    margin-right: 40px;
+}
+
+.txt-div {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(159, 159, 160);
+    border-radius: 20px;
+}
+.post-div /*посты например в "статьи"*/
+{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(159, 159, 160);
+    border-radius: 20px;
+}
+
+.only_post-div /*одиночный пост в "детальнее"*/
+{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(210, 243, 203);
+    box-shadow: 1px 1px 4px 4px rgb(159, 159, 160);
+    border-radius: 40px;
+}
+.login-div {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(159, 159, 160);
+    border-radius: 20px;
+}
+
+.login {
+    margin-left: 20px;
+}
+
+
+.post-dobstats {
+    margin-left: 20px;
+}
+.post-title {
+    margin: 0;
+}
+.no-posts {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.form-control 
+{
+    margin-left: 20px;
+    min-height: 30px;
+    
+}
+
+.text-area
+{
+border: 2px solid #181616;
+background: #f3f2f2;
+margin-left: 20px;
+min-width: 500px;
+min-height: 100px;
+}
+
+.name {
+    margin: 20px;
+}
+.txt {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.button.active
+{
+    display: none;
+}
+
+
+.nav-names2
+ {
+    color: rgb(0, 0, 0);
+    margin-right: 40px;
+}
+
+.nav-names2:hover 
+{
+    transform: scale(1.2);
+    animation: rainbow-main 4.5s linear;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes rainbow-main {
+    100%,0%
+    {
+        color: rgb(255,0,0);
+    }
+    
+    
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!КАРТИНЫ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.two-button {
+    width: 20%;
+    height: 560px;
+    margin-top: 30px;
+    margin-left: 0%;
+    padding: 20px;
+
+    background-color: rgb(236, 224, 49);
+    border-radius: 15px;
+}
+
+.card {
+    width: 20%;
+    height: 560px;
+    margin-top: 30px;
+    margin-left: 1%;
+    padding: 20px;
+
+    background-color: rgb(238, 238, 238);
+    border-radius: 15px;
+}
+
+.card-photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.card-text {
+    margin-top: 30px;
+    font-size: 15px;
+    color: rgb(82, 82, 82);
+    text-size-adjust: none;
+}
+
+.card-subtitle {
+    font-size: 20px;
+    color: rgb(82, 82, 82);
+    text-size-adjust: none;
+}
+
+.news {
+    width: 60%;
+    height: 600px;
+    margin-top: 30px;
+    right: -16%;
+    position: relative;
+
+    background-color: rgb(238, 238, 238);
+    border-radius: 15px;
+}
+
+.top-news-name {
+    margin-left: 2%;
+    margin-top: 10px;
+    color: rgb(238, 238, 238);
+    font-size: 48px;
+    z-index: 3;
+    bottom: 10%;
+    position: absolute;
+    transition: all 0.5s ease-in-out 0s;
+}
+.top-news-sd {/*текст на картинке*/
+    margin-bottom: 20px;
+    margin-left: 2%;
+    width: 70%;
+    bottom: -5%;
+
+    opacity: 0;
+    color: rgb(238, 238, 238);
+    font-size: 20px;
+    z-index: 3;
+    position: absolute;
+    transition: all 0.5s ease-in-out 0s;
+}
+.top-news-preview {/*анимация картинки*/
+    transition: all 0.5s ease-in-out 0s;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.news:hover .top-news-name {/*анимация картинки*/
+    bottom: 32%;
+}
+.news:hover .top-news-sd {/*анимация картинки*/
+    opacity: 100%;
+    bottom: 8%;
+}
+
+
+.body-container {
+    display: flex; 
+    flex-direction: row;
+}
+
+

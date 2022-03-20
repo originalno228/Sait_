@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block title%}
+Главная
+
+{% endblock %}
+
+{% block body%}
+
+<div class="i-body" style="overflow-y: hidden; overflow-x: hidden;">
+
+  
+    <div class="body-container">
+        <div class="card">
+            <img class="card-photo"  src="{{user_image}}" alt="error">
+
+            <div class="card-text">
+
+                <p>text  texttext text text в text
+                    texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttext</p>
+    
+                <p>texttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttexttexttexttexttexttexttexttexttexttext
+                    texttexttexttext
+                </p>
+
+            </div>
+        </div>
+
+        <div class="news">
+            <h3 class="top-news-name">что <br>что</h3>
+            <p class="top-news-sd">texttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttext
+            </p>
+            <img src = {{user_image}} alt="#" class="top-news-preview">
+            
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+</div>
+{% endblock %}
