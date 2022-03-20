@@ -94,7 +94,6 @@ class Article(db.Model):
     intro = db.Column(db.String(300), nullable=False)
     text = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow())
-    public = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return '<Articel %r' % self.id  # объект + айди
